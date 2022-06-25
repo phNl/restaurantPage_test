@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <H1>Главная страница ресторана "НазваниеРесторана"</H1><br>
+    <H3>Блюдо дня: </H3> {{ dishes[2].name }}
+    <ul>
+        {% for dish in dishes %}
+            <li>{{ dish.name }} | {{ dish.price }} рублей | {{ dish.weight }} грамм</li>
+        {% endfor %}
+    </ul>
+    <a href="/?&action=edit_menu">Добавить блюдо</a>
+</body>
+</html>
